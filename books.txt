@@ -1,0 +1,8 @@
+3, kniha3,G3,25$
+6, kniha6,G3,25$
+2, kniha2,G2,50$
+5, kniha5,G5,25$
+4, kniha4,G4,40$
+1, kniha,G,70$
+8, kniha8,G8,25$
+7, kniha3,G7,20$
