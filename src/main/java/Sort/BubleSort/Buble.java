@@ -1,20 +1,28 @@
 package Sort.BubleSort;
 
 import java.io.FileNotFoundException;
-
 import java.io.IOException;
-
-import org.openjdk.jmh.annotations.BenchmarkMode;
+import java.util.Random;
+import Sort.Stopky.StopWatch;
 
 public class Buble {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
+		StopWatch stopWatch = new StopWatch();
+		Long start = stopWatch.start();
 		Integer d;
 
-		Integer[] data = { -769214442, -1283881723, 1504158300, -1260321086, -1800976432, 1278262737, 1863224321,
-				1895424914, 2062768552, -1051922993, 751605209, -1500919212, 2094856518, -1014488489, -931226326,
-				-1677121986, -2080561705, 562424208, -1233745158, 41308167, 5159529, 524951951, 81429495, 799526,
-				7226445, 249929287 };
+		Random random = new Random();
+
+		Integer[] array = new Integer[9999];
+
+		for (int i = 0; i < 9999; i++) {
+			array[i] = random.nextInt();
+
+		}
+
+		Integer[] data = array;
+
 		for (int i = 0; i < data.length; i++) {
 			for (int j = i + 1; j < data.length; j++) {
 				if (data[j].compareTo(data[i]) < 0) {
@@ -23,11 +31,14 @@ public class Buble {
 					data[i] = d;
 
 				}
+
 			}
-			System.out.println(data[i]);
+
+			System.out.print(data[i] + "\n");
+
 		}
-	
-
+		Long stop = stopWatch.stop();
+		System.out.print("Time" + stopWatch.getTime(start, stop) + "\n");
+		System.out.print("O(n^{2})" + "kvadratická" + "\n");
 	}
-
 }
