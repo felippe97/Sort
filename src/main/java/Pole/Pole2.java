@@ -44,7 +44,7 @@ public class Pole2 {
 		System.out.println("nahodny index  " + random + "\n");
 
 		boolean found = false;
-		for (int n : num) {
+		for (int n : newNum) {
 			if (n == random) {
 				found = true;
 				break;
