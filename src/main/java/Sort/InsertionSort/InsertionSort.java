@@ -36,7 +36,7 @@ public class InsertionSort {
 		       
 	        
 	        for(int i:data){    
-	        	System.out.print(i+"\n");    
+	        	System.out.print(i + "\n");    
 	        }    
 	        Long stop = stopWatch.stop();
             
