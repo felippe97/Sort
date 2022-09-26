@@ -1,17 +1,17 @@
 package Pole;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
+
 import java.util.Random;
+
+import org.w3c.dom.Element;
 
 public class Pole2 {
 
 	public static void main(String[] args) {
-
+		int d;
 		int[] num = new int[10];
-		
+
 		int del;
 		for (int i = 0; i < num.length; i++) {
 			num[i] = i;
@@ -23,39 +23,30 @@ public class Pole2 {
 			int temp = num[r];
 			num[r] = num[i];
 			num[i] = temp;
-			
+
 		}
+
 		System.out.println("Prehadzane pole " + Arrays.toString(num));
-		
-		
-		
+
 		int max = 9;
 		int min = 0;
 
 		int random = (int) (Math.random() * (max - min + 1) + min);
-		int[] newNum = new int[num.length -1];
-		for(int i=0, k=0;i<num.length;i++){
-            if(i!=random){
-                newNum[k]=num[i];
-                k++;
-            }
-        }
-		System.out.println("Odstraneny index random " + Arrays.toString(newNum));
-		System.out.println("nahodny index  " + random + "\n");
-
-		boolean found = false;
-		for (int n : newNum) {
-			if (n == random) {
-				found = true;
-				break;
+		int index = random;
+		int[] newNum = new int[num.length - 1];
+		for (int i = 0, k = 0; i < num.length; i++) {
+			if (i != index) {
+				newNum[k] = num[i];
+				k++;
 			}
 		}
-
-		if (found) {
-			System.out.println(random + " Je to tam");
-		} else {
-			System.out.println(random + " Smola");
-		}
+		System.out.println("Odstraneny index random " + Arrays.toString(newNum));
+		System.out.println("nahodny index  " + index + "\n");
+		
+	
+		
+		
+		
 	}
 
 }
