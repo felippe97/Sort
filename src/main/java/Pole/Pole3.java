@@ -6,10 +6,7 @@ import java.util.Random;
 public class Pole3 {
 
 	public static void main(String[] args) {
-		int d;
 		int[] num = new int[10];
-
-		int del;
 		for (int i = 0; i < num.length; i++) {
 			num[i] = i;
 		}
@@ -28,7 +25,6 @@ public class Pole3 {
 		int data1 = num.length;
 		int[] lava = new int[(data1 + 1) / 2];
 		int[] prava = new int[data1 - lava.length];
-
 		for (int i = 0; i < data1; i++) {
 			if (i < lava.length) {
 				lava[i] = num[i];
