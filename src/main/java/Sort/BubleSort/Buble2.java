@@ -5,27 +5,19 @@ import java.io.IOException;
 import java.util.Random;
 import Sort.Stopky.StopWatch;
 
-public class Buble {
+public class Buble2 {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
-		StopWatch stopWatch = new StopWatch();
-		Long start = stopWatch.start();
 		Integer d;
 
-		Random random = new Random();
+		Integer[] array = {1,2,3,4,5,6,7,8,9,10};
 
-		Integer[] array = new Integer[10];
-
-		for (int i = 0; i < 10; i++) {
-			array[i] = random.nextInt();
-
-		}
-
+	
 		Integer[] data = array;
 
 		for (int i = 0; i < data.length; i++) {
 			for (int j = i + 1; j < data.length; j++) {
-				if (data[j].compareTo(data[i]) < 0) {
+				if (data[j].compareTo(data[i]) > 0) {
 					d = data[j];
 					data[j] = data[i];
 					data[i] = d;
@@ -37,8 +29,5 @@ public class Buble {
 			System.out.print(data[i] + "\n");
 
 		}
-		Long stop = stopWatch.stop();
-		System.out.print("Time" + stopWatch.getTime(start, stop) + "\n");
-		System.out.print("O(n^{2})" + "kvadratická" + "\n");
 	}
 }
